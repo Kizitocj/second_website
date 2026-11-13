@@ -1,0 +1,134 @@
+Ternary or Conditional Operator:
+
+If a customer has more than 100 points, they are a 'gold' customer, otherwise,
+they are a 'sliver' customer.
+
+
+let points = 110;
+let type = points > 100 ? 'gold' : 'sliver';
+
+we start with a condition if that condition is true we execute otherwise it
+executes false.
+
+Logical Operators:
+we use the operators to make decisions based on multiple conditions.
+we have 3 types  AND, OR and NOT;
+
+Logical AND(&&):
+This operator returns TRUE if both operands are TRUE.
+console.log(true && false); returns false
+
+You may ask what is a real world use case for this operator, Let's imagine
+we want to build and application for approving loans, if the applicant has high
+income and good credit score then they will be eligible for loans.
+
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+
+console.log(eligibleForLoan);
+
+Logical OR(||):
+This returns true if one of the operands is TRUE;
+console.log(true || false); returns true
+
+NOT(!):
+so let's imagine the applicant is NOT eligible for loan, i.e the application
+has refused.
+
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome && goodCreditScore;
+
+console.log('Eligible ' eligibleForLoan);
+
+let applicationRefused = !eligibleForLoan;
+console.log('Applcation Refused ' applicationRefused);
+
+Logical Operators with Non-booleans:
+so we've learned about logical operators with boolean values;
+let see it with non boolean values.
+
+in our console, lets say we have:
+false || true
+returns true;
+false || 'Napoleon'
+returns 'Napoleon'
+false || 1
+returns 1;
+
+The result a logical expression is not necessarily a true or false. That depends on
+the value of the operands we have. from the examples above, we have string and number.
+those are different operands that's why it returned them as the result.
+
+if the operand is not a boolean TRUE of FALSE, it will try to interpret it as a truthy or falsy value.
+
+Falsy(false) values:
+Undefined
+null
+0
+a boolean false
+an empty string ''
+NaN
+These are falsy values:
+
+Anything that is not Falsy -> Truthy
+
+what if we have an expression like this 
+false || 1 || 2
+returns 1
+
+Now what happened here is that it checked and saw the first truthy value and returned it.
+in other words as long as there was a spotted truthy value it returns the first.
+This is what we call Short-circuiting.
+
+Now that you've understood how this non boolean values work, let me give you a real world case,
+on when to use this.
+Let's imagine an application, and somewhere the user has to pick a color, or we are going to use 
+a default color. 
+
+let userColor = 'red';
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor
+
+console.log(currentColor);
+
+
+Bitwise Operator:
+This is the last group of operator we are talking about in this course.
+This is not really a practical use operator is more of logical reason shit, but then for the sake
+of JavaScript we just need to at least hear and Know about it, it's hardly and rearly use in real world,
+operations anyway.
+
+Number 1 in the decimal system is equal to 7 zero(0) and 1
+ 1 = 00000001 so we have eight digits and each digits are called bits so we have 8 bits, which represents
+ one byte of information in a computer.
+Number 2
+2 = 00000010
+
+Operator Precedence:
+When working with complex expressions one thing we should account for is the precedence of operators. 
+
+let x = 2 + 3 * 4;
+console.log(x);
+The reason for that is because the multiplication operator has higher precedence.
+
+so to avoid that we can use parenthesis to determine how this operators are applied.
+example:
+let x = (2 + 3) * 4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
